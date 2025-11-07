@@ -38,8 +38,7 @@ TODO
 * Storage resource explorer: 
     https://github.com/candiceT233/linux_resource_detect
     
-* [DataLife](https://github.com/pnnl/datalife):
-  <!-- https://github.com/candiceT233/datalife -->
+* [DataLife](https://github.com/pnnl/datalife): <!-- https://github.com/candiceT233/datalife -->
   The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
 
 
