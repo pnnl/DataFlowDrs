@@ -5,6 +5,12 @@
 DataFlowDrs
 =============================================================================
 
+**Home**:
+  - https://github.com/pnnl/DataFlowDrs
+  
+  - [Performance Lab for EXtreme Computing and daTa](https://github.com/perflab-exact)
+
+
 **About**: 
 
 Scientific workflows  are critical in many areas of scientific exploration. Because these workflows tend to be data intensive, severe bottlenecks emerge in storage systems and I/O networks. We introduce DataFlowDrs, a new comprehensive suite of tools for performance optimization of HPC workflows that especially focuses on data flow and storage. DataFlowDrs introduces (a) lightweight high-resolution measurement and visualization tools for workflow profiling and tracing; (b) rapid modeling and analysis that reduces analysis data by compressing common repeated coordination patterns; (c) novel methods for predicting data flow scaling using automatically generated interpretable models of data flow; (d) effective performance analysis and bottleneck detection that can automatically quantify and rank bottlenecks for different combinations of task parallelism and storage resources; (e) actionable performance optimization in the form of new schedules and resource assignments. DataFlowDrs automates several previously difficult manual analyses and substantially reduces the impact of data flow bottlenecks by recommending the right tradeoffs between task parallelism and storage performance.
@@ -29,16 +35,11 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
 TODO
 -----------------------------------------------------------------------------
 
-## [DataFlowDrs](https://gitlab.com/perflab-exact/bigflow-suite): Performance analysis and scheduling for distributed scientific workflows
-
-<!-- https://github.com/perflab-exact -->
-
-
 * Storage resource explorer: 
     https://github.com/candiceT233/linux_resource_detect
     
 * [DataLife](https://github.com/pnnl/datalife):
-  https://github.com/candiceT233/datalife
+  <!-- https://github.com/candiceT233/datalife -->
   The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
 
 
@@ -58,7 +59,7 @@ TODO
     https://github.com/candiceT233/linux_resource_detect/tree/dev/perf_analysis/fastflow_plots
     -->
 
-* FastFlow: https://github.com/PerfLab-EXaCT/FastFlow <!-- [FastFlow]() https://github.com/pnnl/FastFlow -->
+* FastFlow: https://github.com/pnnl/FastFlow  https://github.com/PerfLab-EXaCT/FastFlow <!-- [FastFlow]() -->
    When distributed scientific workflows are not intelligently executed, they can fail time constraints. To improve workflow response time, FastFlow is a new method of scheduling that prioritizes critical flow paths and their interactions. The key insight is to use the global perspective of interacting critical flows to guide a fast (locally greedy) scheduler that uses data flow projections to select between the better of flow parallelism and flow locality. The result is a rapid, linear-time scheduling method that achieves high quality results and excels on data-intensive workflows.
 
   
