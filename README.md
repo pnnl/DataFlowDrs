@@ -85,13 +85,13 @@ DataFlowDrs/
 ```
 
 **Build a single component:**
-You can also build just a single component (e.g., datalife) instead of the entire suite:
+You can also build just a single component instead of the entire suite:
 ```bash
 # Using the build script
-./scripts/build-component.sh datalife
+./scripts/build-component.sh <component_name>
 
 # Or manually with CMake
-cd components/datalife
+cd components/<component_name>
 mkdir build && cd build
 cmake ..
 make
@@ -115,7 +115,26 @@ The combination of ever-growing scientific datasets and distributed workflow com
 
 See `components/datalife/README.md` for detailed usage instructions.
 
-**Build a single component:**
+### Usage Examples
+
+```bash
+# Step 1: Set up monitoring environment
+# Set output directory for monitoring data
+export DATALIFE_OUTPUT_PATH="./my_workflow_stats"
+# Specify file patterns to monitor (optional)
+export DATALIFE_FILE_PATTERNS="*.h5, *.nc"
+
+# Step 2: Run your workflow with monitoring
+LD_PRELOAD=/path/to/install/lib/libmonitor.so python my_workflow.py [args]
+-OR-
+export PATH="/path/to/install/bin:$PATH"
+datalife-run python my_workflow.py [args]
+
+# Step 3: Analyze the collected data
+datalife-analyze -i ./my_workflow_stats -o my_workflow_dfl.png
+```
+
+**Build a single component**:
 To build just datalife instead of the entire suite:
 ```bash
 # Using the build script
