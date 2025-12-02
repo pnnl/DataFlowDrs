@@ -1,0 +1,3 @@
+[submodule "components/datalife"]
+	path = components/datalife
+	url = https://github.com/pnnl/datalife.git

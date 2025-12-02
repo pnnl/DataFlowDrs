@@ -32,6 +32,104 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
 
 
 
+Getting Started
+-----------------------------------------------------------------------------
+
+### Prerequisites
+
+- **CMake** >= 3.15
+- **C++14** compliant compiler (GCC 7+, Clang 5+)
+- **Python** 3.7+
+- **Git** 2.13+ (for submodules)
+
+### Quick Build Instructions
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/pnnl/DataFlowDrs.git
+cd DataFlowDrs
+
+# 2. Initialize submodules
+./init-repository.sh
+
+# 3. Build entire suite (includes Python dependencies)
+./scripts/build-all.sh
+
+# 4. Add to PATH
+export PATH="$(pwd)/install/bin:$PATH"
+```
+
+### Repository Structure
+
+```
+DataFlowDrs/
+├── CMakeLists.txt           # Top-level build configuration
+├── BUILD.md                 # Build guide
+├── init-repository.sh       # Submodule initialization script
+├── components/
+│   └── datalife/            # DataLife - Measurement & DFL analysis
+├── scripts/                 # Build automation scripts
+└── docs/                    # Documentation
+```
+
+### Build Options
+
+**Standard build:**
+```bash
+./scripts/build-all.sh
+```
+
+**Debug build:**
+```bash
+./scripts/build-all.sh Debug
+```
+
+**Build a single component:**
+You can also build just a single component (e.g., datalife) instead of the entire suite:
+```bash
+# Using the build script
+./scripts/build-component.sh datalife
+
+# Or manually with CMake
+cd components/datalife
+mkdir build && cd build
+cmake ..
+make
+```
+
+
+
+
+DataLife - Measurement & DFL Analysis
+-----------------------------------------------------------------------------
+
+**Repository**: https://github.com/pnnl/datalife
+
+The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
+
+### Components
+
+**FlowMonitor**: Description
+
+**FlowAnalysis**: Description
+
+See `components/datalife/README.md` for detailed usage instructions.
+
+**Build a single component:**
+To build just datalife instead of the entire suite:
+```bash
+# Using the build script
+./scripts/build-component.sh datalife
+
+# Or manually with CMake
+cd components/datalife
+mkdir build && cd build
+cmake ..
+make
+```
+
+
+
 TODO
 -----------------------------------------------------------------------------
 
@@ -82,4 +180,3 @@ References
 * H. Lee, J. Firoz, N. R. Tallent, L. Guo, and M. Halappanavar, “FlowForecaster: Automatically inferring detailed & interpretable workflow scaling models for forecasts,” in Proc. of the 39th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, June 2025. ([doi](https://doi.org/10.1109/IPDPS64566.2025.00045))
 
 * J. Firoz, H. Lee, L. Guo, M. Tang, N. R. Tallent, and Z. Peng, “FastFlow: Rapid workflow response by prioritizing critical data flows and their interactions,” in Proc. of the 37th Intl. Conf. on Scalable Scientific Data Management, ACM, June 2025. ([doi](https://doi.org/10.1145/3733723.3733735))
-
