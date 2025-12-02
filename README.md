@@ -113,8 +113,6 @@ The combination of ever-growing scientific datasets and distributed workflow com
 
 **FlowAnalysis**: Description
 
-See `components/datalife/README.md` for detailed usage instructions.
-
 ### Usage Examples
 
 ```bash
@@ -133,6 +131,8 @@ datalife-run python my_workflow.py [args]
 # Step 3: Analyze the collected data
 datalife-analyze -i ./my_workflow_stats -o my_workflow_dfl.png
 ```
+
+See `components/datalife/README.md` for detailed usage instructions.
 
 **Build a single component**:
 To build just datalife instead of the entire suite:
