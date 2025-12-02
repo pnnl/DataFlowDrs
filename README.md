@@ -124,7 +124,7 @@ export DATALIFE_FILE_PATTERNS="*.h5, *.nc"
 
 # Step 2: Run your workflow with monitoring
 LD_PRELOAD=/path/to/install/lib/libmonitor.so python my_workflow.py [args]
--OR-
+# Or
 export PATH="/path/to/install/bin:$PATH"
 datalife-run python my_workflow.py [args]
 
