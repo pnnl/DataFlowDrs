@@ -119,14 +119,16 @@ make
 
 
 
-Storage Resource Explorer
+Components
 -----------------------------------------------------------------------------
+
+### Storage Resource Explorer
 
 **Repository**: https://github.com/candiceT233/linux_resource_detect
 
 The Storage Resource Explorer is a set of shell scripts designed to find resource in Linux using shell scripts.
 
-### Usage Examples
+#### Usage Examples
 
 ```bash
 # Navigate to the component directory
@@ -147,20 +149,19 @@ See `components/linux_resource_detect/README.md` for detailed usage instructions
 
 
 
-DataLife - Measurement & DFL Analysis
------------------------------------------------------------------------------
+### DataLife - Measurement & DFL Analysis
 
 **Repository**: https://github.com/pnnl/datalife
 
 The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
 
-### Components
+#### Subcomponents
 
 **FlowMonitor**: Description
 
 **FlowAnalysis**: Description
 
-### Usage Examples
+#### Usage Examples
 
 ```bash
 # Step 1: Set up monitoring environment
@@ -179,8 +180,6 @@ datalife-run python my_workflow.py [args]
 datalife-analyze -i ./my_workflow_stats -o my_workflow_dfl.png
 ```
 
-See `components/datalife/README.md` for detailed usage instructions.
-
 **Build a single component**:
 To build just datalife instead of the entire suite:
 ```bash
@@ -193,6 +192,8 @@ mkdir build && cd build
 cmake ..
 make
 ```
+
+See `components/datalife/README.md` for detailed usage instructions.
 
 
 
