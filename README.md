@@ -126,7 +126,7 @@ Components
 
 **Repository**: https://github.com/candiceT233/linux_resource_detect
 
-The Storage Resource Explorer is a set of shell scripts designed to find resource in Linux using shell scripts.
+The Storage Resource Explorer is a set of shell scripts designed to find resources in Linux using shell scripts.
 
 #### Usage Examples
 
