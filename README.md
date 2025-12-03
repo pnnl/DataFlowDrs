@@ -63,12 +63,13 @@ export PATH="$(pwd)/install/bin:$PATH"
 
 ```
 DataFlowDrs/
-├── CMakeLists.txt           # Top-level build configuration
-├── init-repository.sh       # Submodule initialization script
+├── CMakeLists.txt                  # Top-level build configuration
+├── init-repository.sh              # Submodule initialization script
 ├── components/
-│   └── datalife/            # DataLife - Measurement & DFL analysis
-├── scripts/                 # Build automation scripts
-└── docs/                    # Documentation
+│   ├── linux_resource_detect/      # Storage Resource Explorer
+│   └── datalife/                   # DataLife - Measurement & DFL analysis
+├── scripts/                        # Build automation scripts
+└── docs/                           # Documentation
 ```
 
 ### Managing Component Submodules
@@ -114,6 +115,34 @@ mkdir build && cd build
 cmake ..
 make
 ```
+
+
+
+
+Storage Resource Explorer
+-----------------------------------------------------------------------------
+
+**Repository**: https://github.com/candiceT233/linux_resource_detect
+
+The Storage Resource Explorer is a set of shell scripts designed to find resource in Linux using shell scripts.
+
+### Usage Examples
+
+```bash
+# Navigate to the component directory
+cd components/linux_resource_detect
+
+# Detect local storage resources
+./remote_data_transfer.sh
+
+# Detect resources on a remote system
+./remote_data_transfer.sh -s <server_address> -i <ssh_identity_file>
+
+# Transfer data to optimal storage location
+./remote_data_transfer.sh -f <file_list> -s <server_address>
+```
+
+See `components/linux_resource_detect/README.md` for detailed usage instructions.
 
 
 
@@ -167,8 +196,11 @@ make
 
 
 
+
 TODO
 -----------------------------------------------------------------------------
+
+<del>
 
 * Storage resource explorer: 
     https://github.com/candiceT233/linux_resource_detect
@@ -176,6 +208,7 @@ TODO
 * [DataLife](https://github.com/pnnl/datalife): <!-- https://github.com/candiceT233/datalife -->
   The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
 
+</del>
 
 * [DaYu](https://github.com/pnnl/DaYu):
   The increasing use of descriptive data formats (e.g., HDF5, netCDF) helps organize scientific datasets, but it also creates obscure bottlenecks due to the need to translate high level operations into file addresses and then into low-level I/O operations. DaYu is a method and toolset for analyzing (a) semantic relationships between logical datasets and file addresses, (b) how dataset operations translate into I/O, and (c) the combination across entire workflows. DaYu's analysis and visualization enables identification of critical bottlenecks and reasoning about remediation. With DaYu, one can extract workflow data patterns, develop insights into the behavior of data flows, and identify opportunities for both users and I/O libraries to optimize the applications.

@@ -12,6 +12,7 @@ set -e
 # To add a new component, add it here:
 #   COMPONENTS[component_name]="https://github.com/org/repo.git"
 declare -A COMPONENTS
+COMPONENTS[linux_resource_detect]="https://github.com/candiceT233/linux_resource_detect.git"
 COMPONENTS[datalife]="https://github.com/pnnl/datalife.git"
 
 show_help() {
@@ -26,11 +27,13 @@ Options:
     -u, --update        Update existing submodules
 
 Components:
+    linux_resource_detect
     datalife
 
 Examples:
-    ./init-repository.sh                    # Initialize all components
-    ./init-repository.sh datalife           # Initialize DataLife
+    ./init-repository.sh                            # Initialize all components
+    ./init-repository.sh linux_resource_detect      # Initialize Storage Resource Explorer
+    ./init-repository.sh datalife                   # Initialize DataLife
 
 EOF
 }
