@@ -59,6 +59,18 @@ cd DataFlowDrs
 export PATH="$(pwd)/install/bin:$PATH"
 ```
 
+### Repository Structure
+
+```
+DataFlowDrs/
+├── CMakeLists.txt           # Top-level build configuration
+├── init-repository.sh       # Submodule initialization script
+├── components/
+│   └── datalife/            # DataLife - Measurement & DFL analysis
+├── scripts/                 # Build automation scripts
+└── docs/                    # Documentation
+```
+
 ### Managing Component Submodules
 
 DataFlowDrs uses git submodules to organize components as separate repositories. The `init-repository.sh` script manages these submodules.
@@ -76,18 +88,6 @@ DataFlowDrs uses git submodules to organize components as separate repositories.
 **Update components to latest versions:**
 ```bash
 ./init-repository.sh --update
-```
-
-### Repository Structure
-
-```
-DataFlowDrs/
-├── CMakeLists.txt           # Top-level build configuration
-├── init-repository.sh       # Submodule initialization script
-├── components/
-│   └── datalife/            # DataLife - Measurement & DFL analysis
-├── scripts/                 # Build automation scripts
-└── docs/                    # Documentation
 ```
 
 ### Build Options
