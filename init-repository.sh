@@ -124,7 +124,7 @@ main() {
     echo ""
     echo "Next steps:"
     echo "  ./scripts/build-all.sh"
-    echo "  ./scripts/build-component.sh datalife"
+    echo "  ./scripts/build-component.sh <component_name>"
 }
 
 main "$@"
