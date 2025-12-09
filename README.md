@@ -169,6 +169,8 @@ The combination of ever-growing scientific datasets and distributed workflow com
 ```bash
 # Step 1: Set up monitoring environment
 # Set output directory for monitoring data
+# NOTE: This directory must already exist - DataLife does not create it automatically
+mkdir -p ./my_workflow_stats
 export DATALIFE_OUTPUT_PATH="./my_workflow_stats"
 # Specify file patterns to monitor (optional)
 export DATALIFE_FILE_PATTERNS="*.h5, *.nc"
@@ -180,6 +182,8 @@ export PATH="/path/to/install/bin:$PATH"
 datalife-run python my_workflow.py [args]
 
 # Step 3: Analyze the collected data
+# NOTE: The output directory must already exist - DataLife does not create it automatically
+mkdir -p ./my_workflow_stats
 datalife-analyze -i ./my_workflow_stats -o my_workflow_dfl.png
 ```
 

@@ -111,7 +111,7 @@ main() {
         components_to_init=("${!COMPONENTS[@]}")
     fi
 
-    [ ! -f "CMakeLists.txt" ] && echo "Error: Run From Dataflowdrs Root Directory" && exit 1
+    [ ! -f "CMakeLists.txt" ] && echo "Error: Run From DataFlowDrs Root Directory" && exit 1
 
     for component in "${components_to_init[@]}"; do
         if [ "$update_mode" = true ]; then

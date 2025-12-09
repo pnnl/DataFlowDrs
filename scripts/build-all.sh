@@ -16,7 +16,7 @@ if [ ! -f "CMakeLists.txt" ]; then
     exit 1
 fi
 
-echo "Building Dataflowdrs"
+echo "Building DataFlowDrs"
 echo "  Build Type: $BUILD_TYPE"
 echo "  Install To: $INSTALL_PREFIX"
 
