@@ -63,8 +63,11 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 set(DATAFLOWDRS_AVAILABLE_COMPONENTS "")
 
 # Helper macro to check if a component's submodule exists
+# For C++ components, checks for CMakeLists.txt
+# For Python/Shell components, checks for README.md or other indicator files
 macro(check_component_available COMPONENT_NAME COMPONENT_PATH)
-  if(EXISTS "${CMAKE_SOURCE_DIR}/components/${COMPONENT_PATH}/CMakeLists.txt")
+  if(EXISTS "${CMAKE_SOURCE_DIR}/components/${COMPONENT_PATH}/CMakeLists.txt" OR
+     EXISTS "${CMAKE_SOURCE_DIR}/components/${COMPONENT_PATH}/README.md")
     list(APPEND DATAFLOWDRS_AVAILABLE_COMPONENTS ${COMPONENT_NAME})
     set(${COMPONENT_NAME}_AVAILABLE TRUE)
   else()
