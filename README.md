@@ -67,7 +67,9 @@ DataFlowDrs/
 ├── init-repository.sh              # Submodule initialization script
 ├── components/
 │   ├── linux_resource_detect/      # Storage Resource Explorer
-│   └── datalife/                   # DataLife - Measurement & DFL analysis
+│   ├── datalife/                   # DataLife - Measurement & DFL analysis
+│   ├── dayu/                       # DaYu - Semantic dataflow analysis
+│   └── flowforecaster/             # FlowForecaster - Workflow scaling models
 ├── scripts/                        # Build automation scripts
 └── docs/                           # Documentation
 ```
@@ -239,6 +241,53 @@ See `components/dayu/README.md` for detailed usage instructions.
 
 
 
+### FlowForecaster - Workflow Scaling Model Inference
+
+**Repository**: https://github.com/pnnl/FlowForecaster
+
+FlowForecaster is a tool for automatically inferring detailed and interpretable workflow scaling models from only a few (3--5) empirical task property graphs. A model represents workflow control and data flow as an abstract DAG with analytical expressions to describe how the DAG scales and how data flows along edges. Thus, with a model and proposed workflow input, FlowForecaster predicts the workflow's tasks, control, and data flow properties. 
+
+#### Prerequisites
+
+FlowForecaster is a Python-based tool with the following dependencies:
+- Python 3.7+
+- numpy
+- networkx
+- matplotlib
+- pandas
+- sortedcontainers
+
+#### Usage Examples
+
+FlowForecaster processes workflow execution data to generate scaling models:
+
+```bash
+# Navigate to FlowForecaster directory
+cd components/flowforecaster
+
+# Run the main model inference script
+python create_canonical_model_auto_scaling.py \
+  --data-instances <data_scaling_files> \
+  --task-instances <task_scaling_files> \
+  --output-data <data_model_output> \
+  --output-task <task_model_output>
+```
+
+**Build FlowForecaster component**:
+To build just FlowForecaster instead of the entire suite:
+```bash
+# Using the build script
+./scripts/build-component.sh flowforecaster
+
+# Or manual dependency installation
+pip install numpy networkx matplotlib pandas sortedcontainers
+```
+
+See `components/flowforecaster/README.md` for detailed usage instructions.
+
+
+
+
 TODO
 -----------------------------------------------------------------------------
 
@@ -255,10 +304,10 @@ TODO
 
     <!-- https://github.com/candiceT233/dayu-tracker -->
 
-</del>
-
 * [FlowForecaster](https://github.com/pnnl/FlowForecaster): 
   FlowForecaster is a tool for automatically inferring detailed and interpretable workflow scaling models from only a few (3--5) empirical task property graphs. A model represents workflow control and data flow as an abstract DAG with analytical expressions to describe how the DAG scales and how data flows along edges. Thus, with a model and proposed workflow input, FlowForecaster predicts the workflow's tasks, control, and data flow properties. 
+
+</del>
 
 * Dataflow Performance Matcher (DPM):
   https://github.com/candiceT233/spm

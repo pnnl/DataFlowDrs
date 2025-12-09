@@ -15,6 +15,7 @@ declare -A COMPONENTS
 COMPONENTS[linux_resource_detect]="https://github.com/candiceT233/linux_resource_detect.git"
 COMPONENTS[datalife]="https://github.com/pnnl/datalife.git"
 COMPONENTS[dayu]="https://github.com/pnnl/DaYu.git"
+COMPONENTS[flowforecaster]="https://github.com/pnnl/FlowForecaster.git"
 
 show_help() {
     cat << EOF
@@ -31,13 +32,15 @@ Components:
     linux_resource_detect
     datalife
     dayu
+    flowforecaster
 
 Examples:
     ./init-repository.sh                            # Initialize all components
     ./init-repository.sh linux_resource_detect      # Initialize Storage Resource Explorer
     ./init-repository.sh datalife                   # Initialize DataLife
     ./init-repository.sh dayu                       # Initialize DaYu
-    
+    ./init-repository.sh flowforecaster             # Initialize FlowForecaster
+
 EOF
 }
 

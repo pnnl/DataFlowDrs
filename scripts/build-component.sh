@@ -8,7 +8,7 @@ set -e
 if [ $# -lt 1 ]; then
     echo "Usage: $0 <component> [build_type] [install_prefix]"
     echo ""
-    echo "Available: datalife, dayu"
+    echo "Available: linux_resource_detect, datalife, dayu, flowforecaster"
     exit 1
 fi
 
@@ -25,8 +25,10 @@ cd "$ROOT_DIR"
 # To add a new component, add it here:
 #   CMAKE_OPT[newcomponent]="BUILD_NEWCOMPONENT"
 declare -A CMAKE_OPT
+CMAKE_OPT[linux_resource_detect]="BUILD_LINUX_RESOURCE_DETECT"
 CMAKE_OPT[datalife]="BUILD_DATALIFE"
 CMAKE_OPT[dayu]="BUILD_DAYU"
+CMAKE_OPT[flowforecaster]="BUILD_FLOWFORECASTER"
 
 [ -z "${CMAKE_OPT[$COMPONENT]}" ] && echo "Error: Unknown component: $COMPONENT" && exit 1
 [ ! -d "components/$COMPONENT" ] && echo "Error: Component not found. Run: ./init-repository.sh $COMPONENT" && exit 1
