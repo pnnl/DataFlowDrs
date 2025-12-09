@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build a specific DataFlowDrs component
+# Build a Specific DataFlowDrs Component
 #
 # Usage: ./scripts/build-component.sh <component> [build_type] [install_prefix]
 
@@ -31,12 +31,12 @@ CMAKE_OPT[dayu]="BUILD_DAYU"
 CMAKE_OPT[flowforecaster]="BUILD_FLOWFORECASTER"
 CMAKE_OPT[spm]="BUILD_SPM"
 
-[ -z "${CMAKE_OPT[$COMPONENT]}" ] && echo "Error: Unknown component: $COMPONENT" && exit 1
-[ ! -d "components/$COMPONENT" ] && echo "Error: Component not found. Run: ./init-repository.sh $COMPONENT" && exit 1
+[ -z "${CMAKE_OPT[$COMPONENT]}" ] && echo "Error: Unknown Component: $COMPONENT" && exit 1
+[ ! -d "components/$COMPONENT" ] && echo "Error: Component Mot Found. Run: ./init-repository.sh $COMPONENT" && exit 1
 
 echo "Building $COMPONENT"
-echo "  Build type: $BUILD_TYPE"
-echo "  Install to: $INSTALL_PREFIX"
+echo "  Build Type: $BUILD_TYPE"
+echo "  Install To: $INSTALL_PREFIX"
 
 mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
@@ -55,4 +55,5 @@ cmake \
 make -j$(nproc)
 make install
 
-echo "Done. Installed to: $INSTALL_PREFIX"
+echo "Done"
+echo "Installed To: $INSTALL_PREFIX"

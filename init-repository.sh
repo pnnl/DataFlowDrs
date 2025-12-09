@@ -1,10 +1,10 @@
 #!/bin/bash
-# Initialize DataFlowDrs git submodules
+# Initialize DataFlowDrs Git Submodules
 #
 # Usage:
-#   ./init-repository.sh              # Initialize all submodules
-#   ./init-repository.sh datalife     # Initialize only datalife
-#   ./init-repository.sh --help       # Show help
+#   ./init-repository.sh                        # Initialize All Submodules
+#   ./init-repository.sh <component_name>       # Initialize Only Specified Component
+#   ./init-repository.sh --help                 # Show Help
 
 set -e
 
@@ -37,7 +37,7 @@ Components:
     spm
 
 Examples:
-    ./init-repository.sh                            # Initialize all components
+    ./init-repository.sh                            # Initialize All Components
     ./init-repository.sh linux_resource_detect      # Initialize Storage Resource Explorer
     ./init-repository.sh datalife                   # Initialize DataLife
     ./init-repository.sh dayu                       # Initialize DaYu
@@ -55,10 +55,10 @@ init_submodule() {
     local component=$1
     local url=${COMPONENTS[$component]}
 
-    [ -z "$url" ] && echo "Error: Unknown component: $component" && return 1
+    [ -z "$url" ] && echo "Error: Unknown Component: $component" && return 1
 
     if submodule_exists "$component"; then
-        echo "Already initialized: $component (use --update to update)"
+        echo "Already Initialized: $component (Use --update To Update)"
         return 0
     fi
 
@@ -78,7 +78,7 @@ update_submodule() {
     local component=$1
 
     if ! submodule_exists "$component"; then
-        echo "Not initialized: $component (skipping)"
+        echo "Not Initialized: $component (Skipping)"
         return 0
     fi
 
@@ -98,7 +98,7 @@ main() {
                 if [[ -n "${COMPONENTS[$1]}" ]]; then
                     components_to_init+=("$1")
                 else
-                    echo "Error: Unknown component or option: $1"
+                    echo "Error: Unknown Component Or Option: $1"
                     exit 1
                 fi
                 shift
@@ -111,7 +111,7 @@ main() {
         components_to_init=("${!COMPONENTS[@]}")
     fi
 
-    [ ! -f "CMakeLists.txt" ] && echo "Error: Run from DataFlowDrs root directory" && exit 1
+    [ ! -f "CMakeLists.txt" ] && echo "Error: Run From Dataflowdrs Root Directory" && exit 1
 
     for component in "${components_to_init[@]}"; do
         if [ "$update_mode" = true ]; then
@@ -122,7 +122,7 @@ main() {
     done
 
     echo ""
-    echo "Next steps:"
+    echo "Next Steps:"
     echo "  ./scripts/build-all.sh"
     echo "  ./scripts/build-component.sh <component_name>"
 }
