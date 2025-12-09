@@ -8,7 +8,7 @@ set -e
 if [ $# -lt 1 ]; then
     echo "Usage: $0 <component> [build_type] [install_prefix]"
     echo ""
-    echo "Available: linux_resource_detect, datalife, dayu, flowforecaster"
+    echo "Available: linux_resource_detect, datalife, dayu, flowforecaster, spm"
     exit 1
 fi
 
@@ -29,6 +29,7 @@ CMAKE_OPT[linux_resource_detect]="BUILD_LINUX_RESOURCE_DETECT"
 CMAKE_OPT[datalife]="BUILD_DATALIFE"
 CMAKE_OPT[dayu]="BUILD_DAYU"
 CMAKE_OPT[flowforecaster]="BUILD_FLOWFORECASTER"
+CMAKE_OPT[spm]="BUILD_SPM"
 
 [ -z "${CMAKE_OPT[$COMPONENT]}" ] && echo "Error: Unknown component: $COMPONENT" && exit 1
 [ ! -d "components/$COMPONENT" ] && echo "Error: Component not found. Run: ./init-repository.sh $COMPONENT" && exit 1

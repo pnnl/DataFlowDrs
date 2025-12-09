@@ -69,7 +69,8 @@ DataFlowDrs/
 │   ├── linux_resource_detect/      # Storage Resource Explorer
 │   ├── datalife/                   # DataLife - Measurement & DFL analysis
 │   ├── dayu/                       # DaYu - Semantic dataflow analysis
-│   └── flowforecaster/             # FlowForecaster - Workflow scaling models
+│   ├── flowforecaster/             # FlowForecaster - Workflow scaling models
+│   └── spm/                        # SPM - Storage Performance Matcher
 ├── scripts/                        # Build automation scripts
 └── docs/                           # Documentation
 ```
@@ -288,6 +289,51 @@ See `components/flowforecaster/README.md` for detailed usage instructions.
 
 
 
+### SPM - Storage Performance Matcher
+
+**Repository**: https://github.com/candiceT233/spm
+
+SPM (Storage Performance Matcher) is a comprehensive system for analyzing scientific workflow performance and optimizing storage configurations.
+
+#### Prerequisites
+
+SPM is a Python-based tool with the following dependencies:
+- Python 3.7+
+- numpy
+- pandas
+- matplotlib
+- scipy
+
+#### Usage Examples
+
+SPM processes workflow data in two phases:
+
+```bash
+# Navigate to SPM workflow analysis directory
+cd components/spm/workflow_analysis
+
+# Phase 1: Convert workflow JSON data to CSV
+python3 workflow_data_loader.py --workflow ddmd_4n_l
+
+# Phase 2: Run SPM analysis
+python3 workflow_analyzer.py analysis_data/ddmd_4n_l_workflow_data.csv
+```
+
+**Build SPM component**:
+To build just SPM instead of the entire suite:
+```bash
+# Using the build script
+./scripts/build-component.sh spm
+
+# Or manual dependency installation
+pip install numpy pandas matplotlib scipy
+```
+
+See `components/spm/workflow_analysis/README.md` for detailed usage instructions.
+
+
+
+
 TODO
 -----------------------------------------------------------------------------
 
@@ -307,8 +353,6 @@ TODO
 * [FlowForecaster](https://github.com/pnnl/FlowForecaster): 
   FlowForecaster is a tool for automatically inferring detailed and interpretable workflow scaling models from only a few (3--5) empirical task property graphs. A model represents workflow control and data flow as an abstract DAG with analytical expressions to describe how the DAG scales and how data flows along edges. Thus, with a model and proposed workflow input, FlowForecaster predicts the workflow's tasks, control, and data flow properties. 
 
-</del>
-
 * Dataflow Performance Matcher (DPM):
   https://github.com/candiceT233/spm
     <!-- 
@@ -316,6 +360,8 @@ TODO
         https://github.com/candiceT233/linux_resource_detect/blob/dev/perf_analysis/wf_analysis.ipynb
     https://github.com/candiceT233/linux_resource_detect/tree/dev/perf_analysis/fastflow_plots
     -->
+
+</del>
 
 * FastFlow: https://github.com/pnnl/FastFlow  https://github.com/PerfLab-EXaCT/FastFlow <!-- [FastFlow]() -->
    When distributed scientific workflows are not intelligently executed, they can fail time constraints. To improve workflow response time, FastFlow is a new method of scheduling that prioritizes critical flow paths and their interactions. The key insight is to use the global perspective of interacting critical flows to guide a fast (locally greedy) scheduler that uses data flow projections to select between the better of flow parallelism and flow locality. The result is a rapid, linear-time scheduling method that achieves high quality results and excels on data-intensive workflows.

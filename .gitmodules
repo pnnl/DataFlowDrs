@@ -10,3 +10,6 @@
 [submodule "components/flowforecaster"]
 	path = components/flowforecaster
 	url = https://github.com/pnnl/FlowForecaster.git
+[submodule "components/spm"]
+	path = components/spm
+	url = https://github.com/candiceT233/spm.git

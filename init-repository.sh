@@ -16,6 +16,7 @@ COMPONENTS[linux_resource_detect]="https://github.com/candiceT233/linux_resource
 COMPONENTS[datalife]="https://github.com/pnnl/datalife.git"
 COMPONENTS[dayu]="https://github.com/pnnl/DaYu.git"
 COMPONENTS[flowforecaster]="https://github.com/pnnl/FlowForecaster.git"
+COMPONENTS[spm]="https://github.com/candiceT233/spm.git"
 
 show_help() {
     cat << EOF
@@ -33,6 +34,7 @@ Components:
     datalife
     dayu
     flowforecaster
+    spm
 
 Examples:
     ./init-repository.sh                            # Initialize all components
@@ -40,6 +42,7 @@ Examples:
     ./init-repository.sh datalife                   # Initialize DataLife
     ./init-repository.sh dayu                       # Initialize DaYu
     ./init-repository.sh flowforecaster             # Initialize FlowForecaster
+    ./init-repository.sh spm                        # Initialize SPM
 
 EOF
 }

@@ -26,6 +26,7 @@ option(BUILD_LINUX_RESOURCE_DETECT "Build Linux Resource Detect (Storage resourc
 option(BUILD_DATALIFE "Build DataLife (Measurement & DFL analysis)" ON)
 option(BUILD_DAYU "Build DaYu (Semantic dataflow analysis for HDF5/netCDF)" ON)
 option(BUILD_FLOWFORECASTER "Build FlowForecaster (Workflow scaling model inference)" ON)
+option(BUILD_SPM "Build SPM (Storage Performance Matcher)" ON)
 
 # Meta-option to build all available components
 option(BUILD_ALL "Build all available DataFlowDrs components" OFF)
@@ -77,6 +78,7 @@ check_component_available(LINUX_RESOURCE_DETECT "linux_resource_detect")
 check_component_available(DATALIFE "datalife")
 check_component_available(DAYU "dayu")
 check_component_available(FLOWFORECASTER "flowforecaster")
+check_component_available(SPM "spm")
 
 # Display available components
 message(STATUS "DataFlowDrs Configuration")
@@ -165,6 +167,42 @@ elseif(BUILD_FLOWFORECASTER AND NOT FLOWFORECASTER_AVAILABLE)
   message(WARNING "FlowForecaster requested but submodule not available. Run: ./init-repository.sh")
 endif()
 
+# SPM (Storage Performance Matcher)
+if((BUILD_ALL OR BUILD_SPM) AND SPM_AVAILABLE)
+  message(STATUS "Setting up: SPM (Python-based)")
+
+  # Find Python3
+  find_package(Python3 COMPONENTS Interpreter)
+
+  if(Python3_FOUND)
+    message(STATUS "  Python: ${Python3_EXECUTABLE}")
+
+    # Install Python dependencies for SPM
+    execute_process(
+      COMMAND ${Python3_EXECUTABLE} -m pip install --user numpy pandas matplotlib scipy
+      RESULT_VARIABLE PIP_INSTALL_RESULT
+      OUTPUT_VARIABLE PIP_INSTALL_OUTPUT
+      ERROR_VARIABLE PIP_INSTALL_ERROR
+      OUTPUT_STRIP_TRAILING_WHITESPACE
+      ERROR_STRIP_TRAILING_WHITESPACE
+    )
+
+    if(PIP_INSTALL_RESULT EQUAL 0)
+      message(STATUS "  ✓ Python dependencies installed successfully")
+    else()
+      message(WARNING "  Failed to install Python dependencies automatically")
+      message(STATUS "  Please manually run: pip install numpy pandas matplotlib scipy")
+    endif()
+
+    message(STATUS "  Scripts available at: ${CMAKE_SOURCE_DIR}/components/spm/workflow_analysis")
+  else()
+    message(WARNING "  Python3 not found. Please install Python dependencies manually:")
+    message(STATUS "  pip install numpy pandas matplotlib scipy")
+  endif()
+elseif(BUILD_SPM AND NOT SPM_AVAILABLE)
+  message(WARNING "SPM requested but submodule not available. Run: ./init-repository.sh")
+endif()
+
 # To add a new component, add a similar block here:
 #
 # if((BUILD_ALL OR BUILD_NEWCOMPONENT) AND NEWCOMPONENT_AVAILABLE)
@@ -193,6 +231,9 @@ if(BUILD_DAYU AND DAYU_AVAILABLE)
 endif()
 if(BUILD_FLOWFORECASTER AND FLOWFORECASTER_AVAILABLE)
   message(STATUS "  [✓] FlowForecaster (Python)")
+endif()
+if(BUILD_SPM AND SPM_AVAILABLE)
+  message(STATUS "  [✓] SPM (Python)")
 endif()
 message(STATUS "")
 message(STATUS "To build:")
