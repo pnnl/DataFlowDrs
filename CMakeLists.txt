@@ -62,12 +62,11 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 # Track which components are actually available (submodule checked out)
 set(DATAFLOWDRS_AVAILABLE_COMPONENTS "")
 
-# Helper macro to check if a component's submodule exists
-# For C++ components, checks for CMakeLists.txt
-# For Python/Shell components, checks for README.md or other indicator files
+# Helper macro to check if a component's submodule is initialized
+# Checks for .git directory/file which is present in all initialized git submodules
 macro(check_component_available COMPONENT_NAME COMPONENT_PATH)
-  if(EXISTS "${CMAKE_SOURCE_DIR}/components/${COMPONENT_PATH}/CMakeLists.txt" OR
-     EXISTS "${CMAKE_SOURCE_DIR}/components/${COMPONENT_PATH}/README.md")
+  # Check if submodule is initialized by looking for .git
+  if(EXISTS "${CMAKE_SOURCE_DIR}/components/${COMPONENT_PATH}/.git")
     list(APPEND DATAFLOWDRS_AVAILABLE_COMPONENTS ${COMPONENT_NAME})
     set(${COMPONENT_NAME}_AVAILABLE TRUE)
   else()
