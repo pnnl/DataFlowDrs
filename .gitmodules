@@ -7,3 +7,6 @@
 [submodule "components/dayu"]
 	path = components/dayu
 	url = https://github.com/pnnl/DaYu.git
+[submodule "components/flowforecaster"]
+	path = components/flowforecaster
+	url = https://github.com/pnnl/FlowForecaster.git
