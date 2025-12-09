@@ -4,3 +4,6 @@
 [submodule "components/datalife"]
 	path = components/datalife
 	url = https://github.com/pnnl/datalife.git
+[submodule "components/dayu"]
+	path = components/dayu
+	url = https://github.com/pnnl/DaYu.git

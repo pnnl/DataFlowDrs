@@ -198,6 +198,47 @@ See `components/datalife/README.md` for detailed usage instructions.
 
 
 
+### DaYu - Semantic Dataflow Analysis
+
+**Repository**: https://github.com/pnnl/DaYu
+
+The increasing use of descriptive data formats (e.g., HDF5, netCDF) helps organize scientific datasets, but it also creates obscure bottlenecks due to the need to translate high level operations into file addresses and then into low-level I/O operations. DaYu is a method and toolset for analyzing (a) semantic relationships between logical datasets and file addresses, (b) how dataset operations translate into I/O, and (c) the combination across entire workflows. DaYu's analysis and visualization enables identification of critical bottlenecks and reasoning about remediation. With DaYu, one can extract workflow data patterns, develop insights into the behavior of data flows, and identify opportunities for both users and I/O libraries to optimize the applications.
+
+#### Usage Examples
+
+```bash
+# Step 1: Set up environment variables
+export CURR_TASK="my_workflow_task"
+
+TRACKER_SRC_DIR="../build/src" # dayu_tracker installation path
+schema_file_path="`pwd`" #your_path_to_store_log_files
+export HDF5_VOL_CONNECTOR="tracker under_vol=0;under_info={};path=$schema_file_path;level=2;format=" # VOL connector info string
+export HDF5_PLUGIN_PATH=$TRACKER_SRC_DIR/vfd:$TRACKER_SRC_DIR/vol
+export HDF5_DRIVER=hdf5_tracker_vfd # VFD driver name
+export HDF5_DRIVER_CONFIG="${schema_file_path};${TRACKER_VFD_PAGE_SIZE}" # VFD info string
+
+# Step 2: Run your HDF5-based workflow
+python my_hdf5_workflow.py
+```
+
+**Build DaYu component**:
+To build just DaYu instead of the entire suite:
+```bash
+# Using the build script
+./scripts/build-component.sh dayu
+
+# Or manually with CMake
+cd components/dayu
+mkdir build && cd build
+cmake ..
+make
+```
+
+See `components/dayu/README.md` for detailed usage instructions.
+
+
+
+
 TODO
 -----------------------------------------------------------------------------
 
@@ -209,12 +250,12 @@ TODO
 * [DataLife](https://github.com/pnnl/datalife): <!-- https://github.com/candiceT233/datalife -->
   The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
 
-</del>
-
 * [DaYu](https://github.com/pnnl/DaYu):
   The increasing use of descriptive data formats (e.g., HDF5, netCDF) helps organize scientific datasets, but it also creates obscure bottlenecks due to the need to translate high level operations into file addresses and then into low-level I/O operations. DaYu is a method and toolset for analyzing (a) semantic relationships between logical datasets and file addresses, (b) how dataset operations translate into I/O, and (c) the combination across entire workflows. DaYu's analysis and visualization enables identification of critical bottlenecks and reasoning about remediation. With DaYu, one can extract workflow data patterns, develop insights into the behavior of data flows, and identify opportunities for both users and I/O libraries to optimize the applications.
 
     <!-- https://github.com/candiceT233/dayu-tracker -->
+
+</del>
 
 * [FlowForecaster](https://github.com/pnnl/FlowForecaster): 
   FlowForecaster is a tool for automatically inferring detailed and interpretable workflow scaling models from only a few (3--5) empirical task property graphs. A model represents workflow control and data flow as an abstract DAG with analytical expressions to describe how the DAG scales and how data flows along edges. Thus, with a model and proposed workflow input, FlowForecaster predicts the workflow's tasks, control, and data flow properties. 

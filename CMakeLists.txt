@@ -23,6 +23,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # Individual component options
 # To add a new component, add a BUILD_<COMPONENT> option here
 option(BUILD_DATALIFE "Build DataLife (Measurement & DFL analysis)" ON)
+option(BUILD_DAYU "Build DaYu (Semantic dataflow analysis for HDF5/netCDF)" ON)
 
 # Meta-option to build all available components
 option(BUILD_ALL "Build all available DataFlowDrs components" OFF)
@@ -71,6 +72,7 @@ endmacro()
 # Check availability of each component
 # To add a new component, add a check_component_available() call here
 check_component_available(DATALIFE "datalife")
+check_component_available(DAYU "dayu")
 
 # Display available components
 message(STATUS "DataFlowDrs Configuration")
@@ -96,6 +98,14 @@ elseif(BUILD_DATALIFE AND NOT DATALIFE_AVAILABLE)
   message(WARNING "DataLife requested but submodule not available. Run: ./init-repository.sh")
 endif()
 
+# DaYu (Semantic dataflow analysis)
+if((BUILD_ALL OR BUILD_DAYU) AND DAYU_AVAILABLE)
+  message(STATUS "Building: DaYu")
+  add_subdirectory(components/dayu)
+elseif(BUILD_DAYU AND NOT DAYU_AVAILABLE)
+  message(WARNING "DaYu requested but submodule not available. Run: ./init-repository.sh")
+endif()
+
 # To add a new component, add a similar block here:
 #
 # if((BUILD_ALL OR BUILD_NEWCOMPONENT) AND NEWCOMPONENT_AVAILABLE)
@@ -115,6 +125,9 @@ message(STATUS "=====================")
 message(STATUS "Components to build:")
 if(BUILD_DATALIFE AND DATALIFE_AVAILABLE)
   message(STATUS "  [✓] DataLife")
+endif()
+if(BUILD_DAYU AND DAYU_AVAILABLE)
+  message(STATUS "  [✓] DaYu")
 endif()
 message(STATUS "")
 message(STATUS "To build:")
