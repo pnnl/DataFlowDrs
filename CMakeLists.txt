@@ -240,8 +240,11 @@ if(BUILD_SPM AND SPM_AVAILABLE)
 endif()
 message(STATUS "")
 message(STATUS "To build:")
-message(STATUS "  cmake -DBUILD_DATALIFE=ON ..")
-message(STATUS "  or")
+message(STATUS "  ./scripts/build-component.sh <component>")
+message(STATUS "  ./scripts/build-all.sh")
+message(STATUS "")
+message(STATUS "Or use CMake directly:")
+message(STATUS "  cmake -DBUILD_<COMPONENT>=ON ..")
 message(STATUS "  cmake -DBUILD_ALL=ON ..")
 message(STATUS "")
 
@@ -260,7 +263,6 @@ install(PROGRAMS
 # Install documentation
 install(FILES
   README.md
-  BUILD.md
   DESTINATION share/doc/dataflowdrs
   OPTIONAL
 )
