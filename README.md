@@ -252,16 +252,6 @@ See `components/dayu/README.md` for detailed usage instructions.
 
 FlowForecaster is a tool for automatically inferring detailed and interpretable workflow scaling models from only a few (3--5) empirical task property graphs. A model represents workflow control and data flow as an abstract DAG with analytical expressions to describe how the DAG scales and how data flows along edges. Thus, with a model and proposed workflow input, FlowForecaster predicts the workflow's tasks, control, and data flow properties. 
 
-#### Prerequisites
-
-FlowForecaster is a Python-based tool with the following dependencies:
-- Python 3.7+
-- numpy
-- networkx
-- matplotlib
-- pandas
-- sortedcontainers
-
 #### Usage Examples
 
 FlowForecaster processes workflow execution data to generate scaling models:
@@ -285,7 +275,7 @@ To build just FlowForecaster instead of the entire suite:
 ./scripts/build-component.sh flowforecaster
 
 # Or manual dependency installation
-pip install numpy networkx matplotlib pandas sortedcontainers
+pip install -r components/flowforecaster/requirements.txt
 ```
 
 See `components/flowforecaster/README.md` for detailed usage instructions.

@@ -143,9 +143,9 @@ if((BUILD_ALL OR BUILD_FLOWFORECASTER) AND FLOWFORECASTER_AVAILABLE)
   if(Python3_FOUND)
     message(STATUS "  Python: ${Python3_EXECUTABLE}")
 
-    # Install Python dependencies
+# Install Python dependencies from requirements.txt
     execute_process(
-      COMMAND ${Python3_EXECUTABLE} -m pip install --user numpy networkx matplotlib pandas sortedcontainers
+      COMMAND ${Python3_EXECUTABLE} -m pip install --user -r ${CMAKE_SOURCE_DIR}/components/flowforecaster/requirements.txt
       RESULT_VARIABLE PIP_INSTALL_RESULT
       OUTPUT_VARIABLE PIP_INSTALL_OUTPUT
       ERROR_VARIABLE PIP_INSTALL_ERROR
@@ -157,13 +157,13 @@ if((BUILD_ALL OR BUILD_FLOWFORECASTER) AND FLOWFORECASTER_AVAILABLE)
       message(STATUS "  ✓ Python Dependencies Installed Successfully")
     else()
       message(WARNING "  Failed To Install Python Dependencies Automatically")
-      message(STATUS "  Please Manually Run: pip install numpy networkx matplotlib pandas sortedcontainers")
+      message(STATUS "  Please Manually Run: pip install -r components/flowforecaster/requirements.txt")
     endif()
 
     message(STATUS "  Scripts Available At: ${CMAKE_SOURCE_DIR}/components/flowforecaster")
   else()
     message(WARNING "  Python3 Not Found. Please Install Python Dependencies Manually:")
-    message(STATUS "  pip install numpy networkx matplotlib pandas sortedcontainers")
+    message(STATUS "  pip install -r components/flowforecaster/requirements.txt")
   endif()
 elseif(BUILD_FLOWFORECASTER AND NOT FLOWFORECASTER_AVAILABLE)
   message(WARNING "FlowForecaster Requested But Submodule Not Available. Run: ./init-repository.sh")
