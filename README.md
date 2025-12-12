@@ -85,24 +85,16 @@ DataFlowDrs/
 
 DataFlowDrs uses git submodules to organize components as separate repositories. The `init-repository.sh` script manages these submodules.
 
-**Initialize all components:**
+**Usage:**
 ```bash
-./init-repository.sh
-```
+./init-repository.sh [OPTIONS] [COMPONENTS...]
 
-**Initialize specific component(s):**
-```bash
-./init-repository.sh <component_name>
-```
-
-**Update all components to latest versions:**
-```bash
-./init-repository.sh --update
-```
-
-**Update specific component(s) to latest versions:**
-```bash
-./init-repository.sh --update
+# Options:
+#   -h, --help      Show help message
+#   -u, --update    Update existing submodules to latest versions
+#
+# Available components:
+#   linux_resource_detect, datalife, dayu, flowforecaster, spm
 ```
 
 ### Build Options
