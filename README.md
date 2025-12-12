@@ -37,10 +37,13 @@ Getting Started
 
 ### Prerequisites
 
-- **CMake** >= 3.15
-- **C++14** compliant compiler (GCC 7+, Clang 5+)
-- **Python** 3.7+
-- **Git** 2.13+ (for submodules)
+- CMake
+- C++ Compiler (GCC or Clang)
+- Python 3 with pip
+- Git
+- Bash
+
+The build system will verify compatibility and report any issues.
 
 ### Quick Build Instructions
 
@@ -49,13 +52,16 @@ Getting Started
 git clone https://github.com/pnnl/DataFlowDrs.git
 cd DataFlowDrs
 
-# 2. Initialize submodules
+# 2. Make scripts executable (if needed)
+chmod +x init-repository.sh scripts/*.sh
+
+# 3. Initialize submodules
 ./init-repository.sh
 
-# 3. Build entire suite (includes Python dependencies)
+# 4. Build entire suite (includes Python dependencies)
 ./scripts/build-all.sh
 
-# 4. Add to PATH
+# 5. Add to PATH
 export PATH="$(pwd)/install/bin:$PATH"
 ```
 
@@ -84,12 +90,17 @@ DataFlowDrs uses git submodules to organize components as separate repositories.
 ./init-repository.sh
 ```
 
-**Initialize specific component:**
+**Initialize specific component(s):**
 ```bash
 ./init-repository.sh <component_name>
 ```
 
-**Update components to latest versions:**
+**Update all components to latest versions:**
+```bash
+./init-repository.sh --update
+```
+
+**Update specific component(s) to latest versions:**
 ```bash
 ./init-repository.sh --update
 ```
