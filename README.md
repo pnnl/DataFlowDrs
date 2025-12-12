@@ -107,32 +107,29 @@ DataFlowDrs uses git submodules to organize components as separate repositories.
 
 ### Build Options
 
-**Standard build:**
+**Usage:**
 ```bash
-./scripts/build-all.sh
-```
+# Build all components
+./scripts/build-all.sh [BUILD_TYPE] [INSTALL_PREFIX]
 
-**Debug build:**
-```bash
-./scripts/build-all.sh Debug
-```
-
-**Custom install location:**
-```bash
-./scripts/build-all.sh Release <path>
-```
-
-**Build a single component:**
-You can also build just a single component instead of the entire suite:
-```bash
-# Using the build script
-./scripts/build-component.sh <component_name>
+# Build specific component
+./scripts/build-component.sh <COMPONENT> [BUILD_TYPE] [INSTALL_PREFIX]
 
 # Or manually with CMake
-cd components/<component_name>
+cd components/<COMPONENT>
 mkdir build && cd build
 cmake ..
 make
+
+# Defaults:
+#   BUILD_TYPE: Release
+#   INSTALL_PREFIX: ./install
+#
+# Available BUILD_TYPE options:
+#   Release, Debug, RelWithDebInfo, MinSizeRel
+#
+# Available components:
+#   linux_resource_detect, datalife, dayu, flowforecaster, spm
 ```
 
 
