@@ -111,7 +111,7 @@ if((BUILD_ALL OR BUILD_LINUX_RESOURCE_DETECT) AND LINUX_RESOURCE_DETECT_AVAILABL
     message(STATUS "  ✓ Bash Found (Version Check: Bash --version)")
     message(STATUS "  Scripts Available At: ${CMAKE_SOURCE_DIR}/components/linux_resource_detect")
   else()
-    message(WARNING "  Bash Not Found. Linux Resource Detect Requires Bash 4.2.46+")
+    message(WARNING "  Bash Not Found. Linux Resource Detect Requires Bash")
   endif()
 elseif(BUILD_LINUX_RESOURCE_DETECT AND NOT LINUX_RESOURCE_DETECT_AVAILABLE)
   message(WARNING "Linux Resource Detect Requested But Submodule Not Available. Run: ./init-repository.sh")
