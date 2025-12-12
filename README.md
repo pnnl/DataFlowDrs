@@ -117,6 +117,11 @@ DataFlowDrs uses git submodules to organize components as separate repositories.
 ./scripts/build-all.sh Debug
 ```
 
+**Custom install location:**
+```bash
+./scripts/build-all.sh Release <path>
+```
+
 **Build a single component:**
 You can also build just a single component instead of the entire suite:
 ```bash
