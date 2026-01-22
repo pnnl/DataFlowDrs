@@ -365,12 +365,14 @@ TODO
 * [FastFlow](https://github.com/pnnl/FastFlow) <!-- https://github.com/PerfLab-EXaCT/FastFlow -->
    When distributed scientific workflows are not intelligently executed, they can fail time constraints. To improve workflow response time, FastFlow is a new method of scheduling that prioritizes critical flow paths and their interactions. The key insight is to use the global perspective of interacting critical flows to guide a fast (locally greedy) scheduler that uses data flow projections to select between the better of flow parallelism and flow locality. The result is a rapid, linear-time scheduling method that achieves high quality results and excels on data-intensive workflows.
 
-  
+
+* QoSFlow: https://github.com/PerfLab-EXaCT/QoSFlow
+
+
+
 ## In Progress:
   
 * AutoFlowFlexer: https://github.com/PerfLab-EXaCT/AutoFlowFlexer
-  
-* QoSFlow: https://github.com/PerfLab-EXaCT/QoSFlow
 
 
 
@@ -387,11 +389,11 @@ References
 
 * J. Firoz, H. Lee, L. Guo, M. Tang, N. R. Tallent, and Z. Peng, “FastFlow: Rapid workflow response by prioritizing critical data flows and their interactions,” in Proc. of the 37th Intl. Conf. on Scalable Scientific Data Management, ACM, June 2025. ([doi](https://doi.org/10.1145/3733723.3733735))
 
-* M. Tang, Z. Zhu, L. Guo, J. G. Bandy, T. Carlson, S. Neuwirth, A. Kougkas, X.-H. Sun, and N. R. Tallent, “Quantifying AWS S3 I/O performance boundaries using the roofline model,” in Proc. of the SC ’25 Workshops of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (10th Intl Parallel Data Systems Workshop), (New York, NY, USA), pp. 1415–1423, Association for Computing Machinery, 11 2025.
+* M. Tang, Z. Zhu, L. Guo, J. G. Bandy, T. Carlson, S. Neuwirth, A. Kougkas, X.-H. Sun, and N. R. Tallent, “Quantifying AWS S3 I/O performance boundaries using the roofline model,” in Proc. of the SC ’25 Workshops of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (10th Intl Parallel Data Systems Workshop), (New York, NY, USA), pp. 1415–1423, Association for Computing Machinery, 11 2025. ([doi](https://doi.org/10.1145/3731599.3767513))
 
 * M. Tang, L. Guo, A. Kougkas, X.-H. Sun, and N. R. Tallent, “Characterization and implications of dataflow in HPC workflows,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
 
-<!-- M. H. Rashid, J. Firoz, N. R. Tallent, L. Guo, M. Tang, and D. Dai, “QoSFlow: Ensuring QoS of distributed workflows using interpretable sensitivity models,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026. -->
+* M. H. Rashid, J. Firoz, N. R. Tallent, L. Guo, M. Tang, and D. Dai, “QoSFlow: Ensuring QoS of distributed workflows using interpretable sensitivity models,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
 
 
 ## Related
