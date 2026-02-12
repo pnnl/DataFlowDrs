@@ -17,6 +17,7 @@ COMPONENTS[datalife]="https://github.com/pnnl/datalife.git"
 COMPONENTS[dayu]="https://github.com/pnnl/DaYu.git"
 COMPONENTS[flowforecaster]="https://github.com/pnnl/FlowForecaster.git"
 COMPONENTS[spm]="https://github.com/candiceT233/spm.git"
+COMPONENTS[fastflow]="https://github.com/pnnl/FastFlow.git"
 
 show_help() {
     cat << EOF
@@ -35,6 +36,7 @@ Components:
     dayu
     flowforecaster
     spm
+    fastflow
 
 Examples:
     ./init-repository.sh                            # Initialize All Components
@@ -43,6 +45,7 @@ Examples:
     ./init-repository.sh dayu                       # Initialize DaYu
     ./init-repository.sh flowforecaster             # Initialize FlowForecaster
     ./init-repository.sh spm                        # Initialize SPM
+    ./init-repository.sh fastflow                   # Initialize FastFlow
 
 EOF
 }

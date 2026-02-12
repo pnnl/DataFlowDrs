@@ -31,6 +31,7 @@ declare -a COMPONENTS=(
     "dayu"
     "flowforecaster"
     "spm"
+    "fastflow"
 )
 
 declare -A CMAKE_OPT
@@ -39,6 +40,7 @@ CMAKE_OPT[datalife]="BUILD_DATALIFE"
 CMAKE_OPT[dayu]="BUILD_DAYU"
 CMAKE_OPT[flowforecaster]="BUILD_FLOWFORECASTER"
 CMAKE_OPT[spm]="BUILD_SPM"
+CMAKE_OPT[fastflow]="BUILD_FASTFLOW"
 
 # Track build results
 declare -a SUCCESS_COMPONENTS=()
@@ -74,6 +76,7 @@ for COMPONENT in "${COMPONENTS[@]}"; do
         -DBUILD_DAYU=OFF \
         -DBUILD_FLOWFORECASTER=OFF \
         -DBUILD_SPM=OFF \
+        -DBUILD_FASTFLOW=OFF \
         -D${CMAKE_OPT[$COMPONENT]}=ON \
         .. > /dev/null 2>&1; then
 

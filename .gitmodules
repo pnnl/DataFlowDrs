@@ -13,3 +13,6 @@
 [submodule "components/spm"]
 	path = components/spm
 	url = https://github.com/candiceT233/spm.git
+[submodule "components/fastflow"]
+	path = components/fastflow
+	url = https://github.com/pnnl/FastFlow

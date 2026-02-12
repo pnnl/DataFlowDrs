@@ -27,6 +27,7 @@ option(BUILD_DATALIFE "Build DataLife (Measurement & DFL analysis)" ON)
 option(BUILD_DAYU "Build DaYu (Semantic dataflow analysis for HDF5/netCDF)" ON)
 option(BUILD_FLOWFORECASTER "Build FlowForecaster (Workflow scaling model inference)" ON)
 option(BUILD_SPM "Build SPM (Storage Performance Matcher)" ON)
+option(BUILD_FASTFLOW "Build FastFlow (flow-aware workflow scheduler)" ON)
 
 # Meta-option to build all available components
 option(BUILD_ALL "Build all available DataFlowDrs components" OFF)
@@ -81,6 +82,7 @@ check_component_available(DATALIFE "datalife")
 check_component_available(DAYU "dayu")
 check_component_available(FLOWFORECASTER "flowforecaster")
 check_component_available(SPM "spm")
+check_component_available(FASTFLOW "fastflow")
 
 # Display available components
 message(STATUS "DataFlowDrs Configuration")
@@ -205,6 +207,45 @@ elseif(BUILD_SPM AND NOT SPM_AVAILABLE)
   message(WARNING "SPM Requested But Submodule Not Available. Run: ./init-repository.sh")
 endif()
 
+# FastFlow (Critical flow-aware workflow scheduler)
+if((BUILD_ALL OR BUILD_FASTFLOW) AND FASTFLOW_AVAILABLE)
+  message(STATUS "Setting Up: FastFlow (Python-Based)")
+
+  # Find Python3
+  find_package(Python3 COMPONENTS Interpreter)
+
+  if(Python3_FOUND)
+    message(STATUS "  Python: ${Python3_EXECUTABLE}")
+
+    # Check if requirements.txt exists and install dependencies
+    if(EXISTS "${CMAKE_SOURCE_DIR}/components/fastflow/requirements.txt")
+      execute_process(
+        COMMAND ${Python3_EXECUTABLE} -m pip install --user -r ${CMAKE_SOURCE_DIR}/components/fastflow/requirements.txt
+        RESULT_VARIABLE PIP_INSTALL_RESULT
+        OUTPUT_VARIABLE PIP_INSTALL_OUTPUT
+        ERROR_VARIABLE PIP_INSTALL_ERROR
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+        ERROR_STRIP_TRAILING_WHITESPACE
+      )
+
+      if(PIP_INSTALL_RESULT EQUAL 0)
+        message(STATUS "  ✓ Python Dependencies Installed Successfully")
+      else()
+        message(WARNING "  Failed To Install Python Dependencies Automatically")
+        message(STATUS "  Please Manually Run: pip install -r components/fastflow/requirements.txt")
+      endif()
+    else()
+      message(STATUS "  No requirements.txt found, assuming dependencies are already installed")
+    endif()
+
+    message(STATUS "  Scripts Available At: ${CMAKE_SOURCE_DIR}/components/fastflow")
+  else()
+    message(WARNING "  Python3 Not Found. Please Install Python Dependencies Manually If Required")
+  endif()
+elseif(BUILD_FASTFLOW AND NOT FASTFLOW_AVAILABLE)
+  message(WARNING "FastFlow Requested But Submodule Not Available. Run: ./init-repository.sh")
+endif()
+
 # To add a new component, add a similar block here:
 #
 # if((BUILD_ALL OR BUILD_NEWCOMPONENT) AND NEWCOMPONENT_AVAILABLE)
@@ -236,6 +277,9 @@ if(BUILD_FLOWFORECASTER AND FLOWFORECASTER_AVAILABLE)
 endif()
 if(BUILD_SPM AND SPM_AVAILABLE)
   message(STATUS "  [✓] SPM (Python)")
+endif()
+if(BUILD_FASTFLOW AND FASTFLOW_AVAILABLE)
+  message(STATUS "  [✓] FastFlow (Python)")
 endif()
 message(STATUS "")
 message(STATUS "To Build:")
