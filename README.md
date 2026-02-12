@@ -61,10 +61,7 @@ Components
 
 
 * [QoSFlow](https://github.com/PerfLab-EXaCT/QoSFlow) *New*
-
-  To enable Quality of Service scheduling constraints (e.g., minimize time, limit execution to resource subsets) for scientific workflows, QoSFlow uses rapid reasoning over the large configuration space that is driven by predictive models rather than costly executions.
-  
-  QoSFlow partitions a workflow's execution configuration space into regions with similar behavior. Each region groups configurations with comparable execution times according to a given statistical sensitivity, enabling efficient QoS-driven scheduling through analytical reasoning rather than exhaustive testing.
+  To enable Quality of Service scheduling constraints (e.g., minimize time, limit execution to resource subsets) for scientific workflows, QoSFlow uses rapid reasoning over the large configuration space that is driven by predictive models rather than costly executions. QoSFlow partitions a workflow's execution configuration space into regions with similar behavior. Each region groups configurations with comparable execution times according to a given statistical sensitivity, enabling efficient QoS-driven scheduling through analytical reasoning rather than exhaustive testing.
 
 
 ## In Progress:
