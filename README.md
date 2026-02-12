@@ -66,7 +66,7 @@ Components
 
 ## In Progress:
   
-* AutoFlowFlexer: https://github.com/PerfLab-EXaCT/AutoFlowFlexer
+* [AutoFlowFlexer](https://github.com/PerfLab-EXaCT/AutoFlowFlexer)
 
 
 Getting Started
