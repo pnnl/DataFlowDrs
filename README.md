@@ -59,7 +59,7 @@ Components
    When distributed scientific workflows are not intelligently executed, they can fail time constraints. To improve workflow response time, FastFlow is a new method of scheduling that prioritizes critical flow paths and their interactions. The key insight is to use the global perspective of interacting critical flows to guide a fast (locally greedy) scheduler that uses data flow projections to select between the better of flow parallelism and flow locality. The result is a rapid, linear-time scheduling method that achieves high quality results and excels on data-intensive workflows.
 
 
-* [QoSFlow](https://github.com/PerfLab-EXaCT/QoSFlow) **New**! &#127381; &#x1F195;
+* [QoSFlow](https://github.com/PerfLab-EXaCT/QoSFlow) **New**! &#x1F195;
   To enable Quality of Service scheduling constraints (e.g., minimize time, limit execution to resource subsets) for scientific workflows, QoSFlow uses rapid reasoning over the large configuration space that is driven by predictive models rather than costly executions. QoSFlow partitions a workflow's execution configuration space into regions with similar behavior. Each region groups configurations with comparable execution times according to a given statistical sensitivity, enabling efficient QoS-driven scheduling through analytical reasoning rather than exhaustive testing.
 
 
