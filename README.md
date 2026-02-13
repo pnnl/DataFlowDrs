@@ -31,7 +31,6 @@ The performance *modeling* (3) predicts data flow bottlenecks using automaticall
 Finally, *bottleneck ranking and resolution* (5) presents actionable performance optimization in the form of new schedules and resource assignments. The resulting schedules find the right tradeoffs between task parallelism and storage performance and that can substantially reduce the impact of data flow bottlenecks.
 
 
-
 Components
 -----------------------------------------------------------------------------
 
@@ -73,6 +72,23 @@ Getting Started
 -----------------------------------------------------------------------------
 
 See [README-Install.md](./README-Install.md) 
+
+
+Contacts
+-----------------------------------------------------------------------------
+
+**Contacts**: (_firstname_._lastname_@pnnl.gov)
+  - Nathan R. Tallent ([www](https://nathantallent.github.io))
+  - Lenny Guo ([www](https://www.pnnl.gov/people/luanzheng-guo))
+  - Jesun Firoz ([www](https://www.pnnl.gov/people/jesun-firoz))
+
+
+**Contributors**:
+  - Zhen Peng ([www](https://johnpzh.github.io))
+  - Jesun Firoz ([www](https://www.pnnl.gov/people/jesun-firoz))
+  - Lenny Guo ([www](https://www.pnnl.gov/people/luanzheng-guo))
+  - Meng Tang (Illinois Institute of Technology) ([www](https://scholar.google.com/citations?user=KXC9NesAAAAJ&hl=en))
+  - Nathan R. Tallent ([www](https://nathantallent.github.io))
 
 
 References
