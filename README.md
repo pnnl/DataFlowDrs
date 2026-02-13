@@ -39,17 +39,17 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
 Components
 -----------------------------------------------------------------------------
 
-* [DataLife](https://github.com/pnnl/DataLife): <!-- https://github.com/candiceT233/datalife -->
+* [DataLife](https://github.com/pnnl/DataLife):
   The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
 
+  <!-- https://github.com/candiceT233/datalife -->
 
 * [DaYu](https://github.com/pnnl/DaYu):
-  <!-- https://github.com/candiceT233/dayu-tracker -->
   The increasing use of descriptive data formats (e.g., HDF5, netCDF) helps organize scientific datasets, but it also creates obscure bottlenecks due to the need to translate high level operations into file addresses and then into low-level I/O operations. DaYu is a method and toolset for analyzing (a) semantic relationships between logical datasets and file addresses, (b) how dataset operations translate into I/O, and (c) the combination across entire workflows. DaYu's analysis and visualization enables identification of critical bottlenecks and reasoning about remediation. With DaYu, one can extract workflow data patterns, develop insights into the behavior of data flows, and identify opportunities for both users and I/O libraries to optimize the applications.
 
+  <!-- https://github.com/candiceT233/dayu-tracker -->
 
 * Dataflow Performance Matcher (DPM) and Storage resource explorer: 
-
   <!-- https://github.com/candiceT233/linux_resource_detect -->
   <!-- https://github.com/candiceT233/spm -->
   <!-- 
@@ -63,9 +63,8 @@ Components
   FlowForecaster is a tool for automatically inferring detailed and interpretable workflow scaling models from only a few (3--5) empirical task property graphs. A model represents workflow control and data flow as an abstract DAG with analytical expressions to describe how the DAG scales and how data flows along edges. Thus, with a model and proposed workflow input, FlowForecaster predicts the workflow's tasks, control, and data flow properties. 
 
 
-* [FastFlow](https://github.com/pnnl/FastFlow) <!-- https://github.com/PerfLab-EXaCT/FastFlow -->
+* [FastFlow](https://github.com/pnnl/FastFlow)
    When distributed scientific workflows are not intelligently executed, they can fail time constraints. To improve workflow response time, FastFlow is a new method of scheduling that prioritizes critical flow paths and their interactions. The key insight is to use the global perspective of interacting critical flows to guide a fast (locally greedy) scheduler that uses data flow projections to select between the better of flow parallelism and flow locality. The result is a rapid, linear-time scheduling method that achieves high quality results and excels on data-intensive workflows.
-
 
 * [QoSFlow](https://github.com/PerfLab-EXaCT/QoSFlow) 🆕 **New**!
   To enable Quality of Service scheduling constraints (e.g., minimize time, limit execution to resource subsets) for scientific workflows, QoSFlow uses rapid reasoning over the large configuration space that is driven by predictive models rather than costly executions. QoSFlow partitions a workflow's execution configuration space into regions with similar behavior. Each region groups configurations with comparable execution times according to a given statistical sensitivity, enabling efficient QoS-driven scheduling through analytical reasoning rather than exhaustive testing.
