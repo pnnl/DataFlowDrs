@@ -68,8 +68,10 @@ Components
    When distributed scientific workflows are not intelligently executed, they can fail time constraints. To improve workflow response time, FastFlow is a new method of scheduling that prioritizes critical flow paths and their interactions. The key insight is to use the global perspective of interacting critical flows to guide a fast (locally greedy) scheduler that uses data flow projections to select between the better of flow parallelism and flow locality. The result is a rapid, linear-time scheduling method that achieves high quality results and excels on data-intensive workflows.
 
 
-* [QoSFlow](https://github.com/PerfLab-EXaCT/QoSFlow) 🆕 **New**!
+* [QoSFlow](https://github.com/pnnl/QoSFlow) 🆕 **New**!
   To enable Quality of Service scheduling constraints (e.g., minimize time, limit execution to resource subsets) for scientific workflows, QoSFlow uses rapid reasoning over the large configuration space that is driven by predictive models rather than costly executions. QoSFlow partitions a workflow's execution configuration space into regions with similar behavior. Each region groups configurations with comparable execution times according to a given statistical sensitivity, enabling efficient QoS-driven scheduling through analytical reasoning rather than exhaustive testing.
+  
+  <!-- https://github.com/PerfLab-EXaCT/QoSFlow -->
 
 
 * Sample [Workflows](https://gitlab.com/PerfLab-EXaCT/workflows)
@@ -121,7 +123,8 @@ References
 
 * M. Tang, L. Guo, A. Kougkas, X.-H. Sun, and N. R. Tallent, “Characterization and implications of dataflow in HPC workflows,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
 
-* M. H. Rashid, J. Firoz, N. R. Tallent, L. Guo, M. Tang, and D. Dai, “QoSFlow: Ensuring QoS of distributed workflows using interpretable sensitivity models,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
+* M. H. Rashid, J. Firoz, N. R. Tallent, L. Guo, M. Tang, and D. Dai, “QoSFlow: Ensuring Service Quality of Distributed Workflows Using Interpretable Sensitivity Models,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
+
 
 
 ## Related
