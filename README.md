@@ -50,9 +50,10 @@ Components
   <!-- https://github.com/candiceT233/dayu-tracker -->
 
 
-* Dataflow Performance Matcher (DPM) and Storage resource explorer: 
+* Dataflow Performance Matcher (DPM) and Storage Resource Explorer: [DPM](https://github.com/candiceT233/dpm):
+
+  <!-- https://github.com/candiceT233/dpm -->
   <!-- https://github.com/candiceT233/linux_resource_detect -->
-  <!-- https://github.com/candiceT233/spm -->
   <!-- 
     https://github.com/candiceT233/linux_resource_detect/tree/dev/perf_analysis
     https://github.com/candiceT233/linux_resource_detect/blob/dev/perf_analysis/wf_analysis.ipynb
