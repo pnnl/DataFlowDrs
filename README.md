@@ -77,6 +77,8 @@ Components
 
 * Sample [Workflows](https://gitlab.com/PerfLab-EXaCT/workflows)
 
+  With prototype [agentic interface](https://github.com/candiceT233/hpc_workflows).
+
 
 
 ## In Progress:
@@ -110,27 +112,25 @@ Contacts
 References
 -----------------------------------------------------------------------------
 
-* H. Lee, L. Guo, M. Tang, J. Firoz, N. Tallent, A. Kougkas, and X.-H. Sun, “Data flow lifecycles for optimizing workflow coordination,” in Proc. of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (SuperComputing), SC ’23, (New York, NY, USA), Association for Computing Machinery, November 2023. ([doi](https://doi.org/10.1145/3581784.3607104))
+* Hyungro Lee, Luanzheng Guo, Meng Tang, Jesun Firoz, Nathan Tallent, Anthony Kougkas, and Xian-He Sun. "Data Flow Lifecycles for Optimizing Workflow Coordination." Proc. of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (SuperComputing), SC '23, Association for Computing Machinery, November 2023. ([doi: 10.1145/3581784.3607104](https://doi.org/10.1145/3581784.3607104))
 
-* M. Tang, J. Cernuda, J. Ye, L. Guo, N. R. Tallent, A. Kougkas, and X.-H. Sun, “DaYu: Optimizing distributed scientific workflows by decoding dataflow semantics and dynamics,” in Proc. of the 2024 IEEE Conf. on Cluster Computing, pp. 357–369, IEEE, September 2024. ([doi](https://doi.org/10.1109/CLUSTER59578.2024.00038))
+* Meng Tang, Jaime Cernuda, Jie Ye, Luanzheng Guo, Nathan R. Tallent, Anthony Kougkas, and Xian-He Sun. "DaYu: Optimizing Distributed Scientific Workflows by Decoding Dataflow Semantics and Dynamics." Proc. of the 2024 IEEE Conf. on Cluster Computing, CLUSTER '24, pp. 357-369, IEEE, September 2024. ([doi: 10.1109/CLUSTER59578.2024.00038](https://doi.org/10.1109/CLUSTER59578.2024.00038))
 
-* L. Guo, H. Lee, J. Firoz, M. Tang, and N. R. Tallent, “Improving I/O-aware workflow scheduling via data flow characterization and trade-off analysis,” in Seventh IEEE Intl. Workshop on Benchmarking, Performance Tuning and Optimization for Big Data Applications (Proc. of the IEEE Intl. Conf. on Big Data), IEEE Computer Society, December 2024. ([doi](https://doi.org/10.1109/BigData62323.2024.10825855))
+* Luanzheng Guo, Meng Tang, Hyungro Lee, Jesun Firoz, and Nathan R. Tallent. "Improving I/O-aware Workflow Scheduling via Data Flow Characterization and Trade-off Analysis" Seventh IEEE Intl. Workshop on Benchmarking, Performance Tuning and Optimization for Big Data Applications (Proc. of the IEEE Intl. Conf. on Big Data), Big Data Workshops '24, pp. 3674-3681, IEEE Computer Society, December 2024. ([doi: 10.1109/BigData62323.2024.10825855](https://doi.org/10.1109/BigData62323.2024.10825855))
 
-* H. Lee, J. Firoz, N. R. Tallent, L. Guo, and M. Halappanavar, “FlowForecaster: Automatically inferring detailed & interpretable workflow scaling models for forecasts,” in Proc. of the 39th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, June 2025. ([doi](https://doi.org/10.1109/IPDPS64566.2025.00045))
+* Hyungro Lee, Jesun Firoz, Nathan R. Tallent, Luanzheng Guo, and Mahantesh Halappanavar. "FlowForecaster: Automatically Inferring Detailed & Interpretable Workflow Scaling Models for Forecasts." Proc. of the 39th IEEE Intl. Parallel and Distributed Processing Symp., IPDPS '25, pp. 420-432, IEEE Computer Society, June 2025. ([doi: 10.1109/IPDPS64566.2025.00045](https://doi.org/10.1109/IPDPS64566.2025.00045))
 
-* J. Firoz, H. Lee, L. Guo, M. Tang, N. R. Tallent, and Z. Peng, “FastFlow: Rapid workflow response by prioritizing critical data flows and their interactions,” in Proc. of the 37th Intl. Conf. on Scalable Scientific Data Management, ACM, June 2025. ([doi](https://doi.org/10.1145/3733723.3733735))
+* Jesun Firoz, Hyungro Lee, Luanzheng Guo, Meng Tang, Nathan R. Tallent, and Zhen Peng. "FastFlow: Rapid Workflow Response by Prioritizing Critical Data Flows and their Interactions." Proc. of the 37th Intl. Conf. on Scalable Scientific Data Management, SSDBM '25, pp. 1-12, ACM, June 2025. ([doi: 10.1145/3733723.3733735](https://doi.org/10.1145/3733723.3733735))
 
-* M. Tang, Z. Zhu, L. Guo, J. G. Bandy, T. Carlson, S. Neuwirth, A. Kougkas, X.-H. Sun, and N. R. Tallent, “Quantifying AWS S3 I/O performance boundaries using the roofline model,” in Proc. of the SC ’25 Workshops of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (10th Intl Parallel Data Systems Workshop), (New York, NY, USA), pp. 1415–1423, Association for Computing Machinery, 11 2025. ([doi](https://doi.org/10.1145/3731599.3767513))
+* Meng Tang, Zhaobin Zhu, Luanzheng Guo, James G. Bandy, Tim Carlson, Sarah Neuwirth, Anthony Kougkas, Xian-He Sun, and Nathan R. Tallent. "Quantifying AWS S3 I/O Performance Boundaries Using the Roofline Model." Proc. of the SC '25 Workshops of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (10th Intl Parallel Data Systems Workshop), SC Workshops '25, pp. 1415-1423, Association for Computing Machinery, November 202. ([doi: 10.1145/3731599.3767513](https://doi.org/10.1145/3731599.3767513))
 
-* M. Tang, L. Guo, A. Kougkas, X.-H. Sun, and N. R. Tallent, “Characterization and implications of dataflow in HPC workflows,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
+* Meng Tang, Luanzheng Guo, Anthony Kougkas, Xian-He Sun, and Nathan R. Tallent. "Characterizing Dataflow for I/O-Aware Scheduling in HPC Workflows." Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IPDPS '26, pp. 868-884, IEEE Computer Society, May 2026. ([doi: 10.1109/IPDPS65963.2026.00076](https://doi.org/10.1109/IPDPS65963.2026.00076))
 
-* M. H. Rashid, J. Firoz, N. R. Tallent, L. Guo, M. Tang, and D. Dai, “QoSFlow: Ensuring Service Quality of Distributed Workflows Using Interpretable Sensitivity Models,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
-
+* Md Hasanur Rashid, Jesun Firoz, Nathan R. Tallent, Luanzheng Guo, Meng Tang, and Dong Dai. "QoSFlow: Ensuring Service Quality of Distributed Workflows Using Interpretable Sensitivity Models." Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IPDPS '26, pp. 1372-1387, IEEE Computer Society, May 2026. ([doi: 10.1109/IPDPS65963.2026.00112](https://doi.org/10.1109/IPDPS65963.2026.00112))
 
 
 ## Related
   
 * C. Egersdoerfer, M. H. Rashid, D. Dai, B. Fang, and N. R. Tallent, “Understanding and predicting cross-application I/O interference in HPC storage systems,” in Proc. of the Workshops of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (9th Intl. Parallel Data Systems Workshop), Nov. 2024. ([doi](https://doi.org/10.1109/SCW63240.2024.00174))
 
-* M. H. Rashid, N. R. Tallent, F. S. Bao, and D. Dai, “CARAT: Client-side adaptive RPC and cache co-tuning for parallel file systems,” in Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IEEE Computer Society, May 2026.
-
+* Md Hasanur Rashid, Nathan R. Tallent, Forrest Sheng Bao, and Dong Dai. "CARAT: Client-Side Adaptive RPC and Cache Co-Tuning for Parallel File Systems." Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IPDPS '26, pp. 1343-1357, IEEE Computer Society, May 2026. ([doi: 10.1109/IPDPS65963.2026.00110](https://doi.org/10.1109/IPDPS65963.2026.00110))
