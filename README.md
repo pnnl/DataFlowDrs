@@ -6,7 +6,7 @@
   ★ ✅ ⚠️ ℹ️
 -->
 
-DataFlowDrs
+# DataFlowDrs
 =============================================================================
 
 **Home**:
@@ -35,7 +35,7 @@ The performance *modeling* (3) predicts data flow bottlenecks using automaticall
 Finally, *bottleneck ranking and resolution* (5) presents actionable performance optimization in the form of new schedules and resource assignments. The resulting schedules find the right tradeoffs between task parallelism and storage performance and that can substantially reduce the impact of data flow bottlenecks.
 
 
-Components
+# Components
 -----------------------------------------------------------------------------
 
 * [DataLife](https://github.com/pnnl/DataLife):
@@ -86,13 +86,13 @@ Components
 * [AutoFlowFlexer](https://github.com/PerfLab-EXaCT/AutoFlowFlexer)
 
 
-Getting Started
+# Getting Started
 -----------------------------------------------------------------------------
 
 See [README-Install.md](./README-Install.md) 
 
 
-Contacts
+# Contacts
 -----------------------------------------------------------------------------
 
 **Contacts**: (_firstname_._lastname_@pnnl.gov)
@@ -109,7 +109,7 @@ Contacts
   - Nathan R. Tallent ([www](https://nathantallent.github.io))
 
 
-References
+# References
 -----------------------------------------------------------------------------
 
 * Hyungro Lee, Luanzheng Guo, Meng Tang, Jesun Firoz, Nathan Tallent, Anthony Kougkas, and Xian-He Sun. "Data Flow Lifecycles for Optimizing Workflow Coordination." Proc. of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (SuperComputing), SC '23, Association for Computing Machinery, November 2023. ([doi: 10.1145/3581784.3607104](https://doi.org/10.1145/3581784.3607104))
