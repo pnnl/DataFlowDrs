@@ -35,7 +35,7 @@ The performance *modeling* (3) predicts data flow bottlenecks using automaticall
 Finally, *bottleneck ranking and resolution* (5) presents actionable performance optimization in the form of new schedules and resource assignments. The resulting schedules find the right tradeoffs between task parallelism and storage performance and that can substantially reduce the impact of data flow bottlenecks.
 
 
-# Components
+## Components
 -----------------------------------------------------------------------------
 
 * [DataLife](https://github.com/pnnl/DataLife):
@@ -81,18 +81,18 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
 
 
 
-## In Progress:
+### In Progress:
   
 * [AutoFlowFlexer](https://github.com/PerfLab-EXaCT/AutoFlowFlexer)
 
 
-# Getting Started
+## Getting Started
 -----------------------------------------------------------------------------
 
 See [README-Install.md](./README-Install.md) 
 
 
-# Contacts
+## Contacts
 -----------------------------------------------------------------------------
 
 **Contacts**: (_firstname_._lastname_@pnnl.gov)
@@ -109,7 +109,7 @@ See [README-Install.md](./README-Install.md)
   - Nathan R. Tallent ([www](https://nathantallent.github.io))
 
 
-# References
+## References
 -----------------------------------------------------------------------------
 
 * Hyungro Lee, Luanzheng Guo, Meng Tang, Jesun Firoz, Nathan Tallent, Anthony Kougkas, and Xian-He Sun. "Data Flow Lifecycles for Optimizing Workflow Coordination." Proc. of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (SuperComputing), SC '23, Association for Computing Machinery, November 2023. ([doi: 10.1145/3581784.3607104](https://doi.org/10.1145/3581784.3607104))
@@ -129,7 +129,7 @@ See [README-Install.md](./README-Install.md)
 * Md Hasanur Rashid, Jesun Firoz, Nathan R. Tallent, Luanzheng Guo, Meng Tang, and Dong Dai. "QoSFlow: Ensuring Service Quality of Distributed Workflows Using Interpretable Sensitivity Models." Proc. of the 40th IEEE Intl. Parallel and Distributed Processing Symp., IPDPS '26, pp. 1372-1387, IEEE Computer Society, May 2026. ([doi: 10.1109/IPDPS65963.2026.00112](https://doi.org/10.1109/IPDPS65963.2026.00112))
 
 
-## Related
+### Related
   
 * C. Egersdoerfer, M. H. Rashid, D. Dai, B. Fang, and N. R. Tallent, “Understanding and predicting cross-application I/O interference in HPC storage systems,” in Proc. of the Workshops of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (9th Intl. Parallel Data Systems Workshop), Nov. 2024. ([doi: 10.1109/SCW63240.2024.00174](https://doi.org/10.1109/SCW63240.2024.00174))
 
