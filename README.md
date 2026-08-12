@@ -1,13 +1,13 @@
 <!-- -*-Mode: markdown;-*- -->
 <!-- $Id$ -->
 
-<!-- 
+<!--
   New: &#x1F195; 
   ★ ✅ ⚠️ ℹ️
 -->
 
 # DataFlowDrs
-=============================================================================
+
 
 **Home**:
   - [DataFlowDrs](https://github.com/pnnl/DataFlowDrs): https://github.com/pnnl/DataFlowDrs
@@ -20,7 +20,7 @@
 Scientific workflows  are critical in many areas of scientific exploration. Because these workflows tend to be data intensive, severe bottlenecks emerge in storage systems and I/O networks. We introduce DataFlowDrs, a new comprehensive suite of tools for performance optimization of HPC workflows that especially focuses on data flow and storage. DataFlowDrs introduces (a) lightweight high-resolution measurement and visualization tools for workflow profiling and tracing; (b) rapid modeling and analysis that reduces analysis data by compressing common repeated coordination patterns; (c) novel methods for predicting data flow scaling using automatically generated interpretable models of data flow; (d) effective performance analysis and bottleneck detection that can automatically quantify and rank bottlenecks for different combinations of task parallelism and storage resources; (e) actionable performance optimization in the form of new schedules and resource assignments. DataFlowDrs automates several previously difficult manual analyses and substantially reduces the impact of data flow bottlenecks by recommending the right tradeoffs between task parallelism and storage performance.
 
 
-**DataFlowDrs Tools**: 
+## DataFlowDrs Tools
 
 ![DataFlowDrs overview](/dataflowdr-overview.png)
 
@@ -36,7 +36,6 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
 
 
 ## Components
------------------------------------------------------------------------------
 
 * [DataLife](https://github.com/pnnl/DataLife):
   The combination of ever-growing scientific datasets and distributed workflow complexity creates I/O performance bottlenecks due to data volume, velocity, and variety. DataLife is a measurement and analysis toolset for distributed scientific workflows comprised of tasks that interact using files and storage. DataLife performs data flow lifecycle (DFL) analysis to guide decisions regarding coordinating task and data flows on distributed resources. DataLife provides tools for measuring, analyzing, visualizing, and estimating the severity of flow bottlenecks based on I/O and storage.
@@ -83,17 +82,15 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
 
 ### In Progress:
   
-* [AutoFlowFlexer](https://github.com/PerfLab-EXaCT/AutoFlowFlexer)
+* [ElasticFlow](https://github.com/PerfLab-EXaCT/ElasticFlow)
 
 
 ## Getting Started
------------------------------------------------------------------------------
 
 See [README-Install.md](./README-Install.md) 
 
 
 ## Contacts
------------------------------------------------------------------------------
 
 **Contacts**: (_firstname_._lastname_@pnnl.gov)
   - Nathan R. Tallent ([www](https://nathantallent.github.io))
@@ -110,7 +107,6 @@ See [README-Install.md](./README-Install.md)
 
 
 ## References
------------------------------------------------------------------------------
 
 * Hyungro Lee, Luanzheng Guo, Meng Tang, Jesun Firoz, Nathan Tallent, Anthony Kougkas, and Xian-He Sun. "Data Flow Lifecycles for Optimizing Workflow Coordination." Proc. of the Intl. Conf. for High Performance Computing, Networking, Storage and Analysis (SuperComputing), SC '23, Association for Computing Machinery, November 2023. ([doi: 10.1145/3581784.3607104](https://doi.org/10.1145/3581784.3607104))
 
