@@ -23,7 +23,7 @@
 
 - Plans
   - [ ] READMEs/HOWTos. A list of topics + dictation is better than crafted text
-  - [ ] Experiment validation data to =/qfs/projects/oddite/dpm=
+  - [ ] Experiment validation data to `/qfs/projects/oddite/dpm`
     - Compress for achiving
     - label Training data so we can deprecate
   - [ ] SRA Search
