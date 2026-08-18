@@ -35,3 +35,30 @@
 
 - NEW (forgot to ask)
   - [ ] What is the status of DPM for direct data flow vs. data flow with intermediate copy? Example: the last stage of 1KG where intermediate file + copy is much faster than direct data flow to parallel storage.
+
+------------------------------------------------------------------------------
+# Final meeting (2026-08-18)
+
+
+- DPM
+  - Widget dominates old DPM -- kill old DPM
+  - Final corrections to DPM calculation
+  - Updated readme
+  
+- Paper
+  - Completed DPM and SRASearch
+
+- Integration with Hasan's agentic workflow orchestrator
+  - integrated new DPM predictions
+
+- Open:
+  - End-to-end dayu eval
+
+- Doing today: cleanup:
+`/qfs/projects/datamesh/tang584/`
+`/qfs/projects/oddite/tang584/`
+`/people/tang584`
+
+- foreground-background question.
+  - foreground-backgroun not implemented, but it raises the question of weighting
+  - really, we should just have a P-C pattern composer
