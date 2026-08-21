@@ -51,11 +51,11 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
   <!-- https://github.com/candiceT233/dayu-tracker -->
 
 
-* [Dataflow Performance Matcher](https://github.com/candiceT233/dpm), [Widget toolset](https://github.com/candiceT233/widget-v1), Storage Resource Explorer:
+* [Dataflow Performance Matcher](https://gitlab.com/perflab-exact/dpm/dpm), [Widget toolset](https://gitlab.com/perflab-exact/dpm/widget), Storage Resource Explorer:
 
 <!--
 https://github.com/candiceT233/widget-v1
-https://github.com/candiceT233/dpm 
+https://github.com/candiceT233/dpm
 https://github.com/candiceT233/linux_resource_detect
 
 https://github.com/candiceT233/linux_resource_detect/tree/dev/perf_analysis
