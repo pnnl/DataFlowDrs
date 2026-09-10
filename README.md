@@ -112,7 +112,7 @@ See [README-Install.md](./README-Install.md)
 
 ## Citation
 
-* Nathan R. Tallent, Meng Tang, Zhen Peng, Jesun Firoz, Luanzheng Guo, Anthony Kougkas, and Xian-He Sun. "DataFlowDrs: Automating Performance Optimization of Data Flow Within HPC Workflows" IEEE Transactions on Parallel and Distributed Systems, September 2026 ([doi: 10.1109/TPDS.2026.3722592](https://doi.org/10.1109/IPDPS65963.2026.00112))
+* Nathan R. Tallent, Meng Tang, Zhen Peng, Jesun Firoz, Luanzheng Guo, Anthony Kougkas, and Xian-He Sun. "DataFlowDrs: Automating Performance Optimization of Data Flow Within HPC Workflows" IEEE Transactions on Parallel and Distributed Systems, pp. 1-18, September 2026 ([doi: 10.1109/TPDS.2026.3722592](https://doi.org/10.1109/IPDPS65963.2026.00112))
 
 ## References
 
