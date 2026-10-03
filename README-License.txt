@@ -1,7 +1,7 @@
                              DataFlowDrs
                      github.com/pnnl/DataFlowDrs
 
-          Copyright ((c)) 2025, Battelle Memorial Institute
+          Copyright ((c)) 2026, Battelle Memorial Institute
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are
