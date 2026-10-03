@@ -22,7 +22,7 @@ Scientific workflows  are critical in many areas of scientific exploration. Beca
 
 ------------------------------------------------------------------------------
 
-# DataFlowDrs Tools
+# DataFlowDrs Toolset
 
 ![DataFlowDrs overview image](/dataflowdr-overview.png)
 
@@ -51,16 +51,14 @@ Finally, *bottleneck ranking and resolution* (5) presents actionable performance
   <!-- https://github.com/candiceT233/dayu-tracker -->
 
 
-* [Dataflow Performance Matcher](https://gitlab.com/perflab-exact/dpm/dpm), [Widget toolset](https://gitlab.com/perflab-exact/dpm/widget), Storage Resource Explorer:
+* [Dataflow Performance Matcher](https://gitlab.com/perflab-exact/dpm/dpm) (including Storage Resource Explorer)
 
 <!--
+[Widget toolset](https://gitlab.com/perflab-exact/dpm/widget)
+
 https://github.com/candiceT233/widget-v1
 https://github.com/candiceT233/dpm
 https://github.com/candiceT233/linux_resource_detect
-
-https://github.com/candiceT233/linux_resource_detect/tree/dev/perf_analysis
-https://github.com/candiceT233/linux_resource_detect/blob/dev/perf_analysis/wf_analysis.ipynb
-https://github.com/candiceT233/linux_resource_detect/tree/dev/perf_analysis/fastflow_plots
 -->
 
 
@@ -80,7 +78,7 @@ https://github.com/candiceT233/linux_resource_detect/tree/dev/perf_analysis/fast
 
 * Sample [Workflows](https://gitlab.com/PerfLab-EXaCT/workflows)
 
-  With prototype [agentic interface](https://github.com/candiceT233/hpc_workflows).
+    - Via [Widget's agentic interface](https://github.com/candiceT233/hpc_workflows)
 
 
 ### In Progress

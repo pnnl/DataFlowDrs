@@ -39,7 +39,6 @@
 ------------------------------------------------------------------------------
 # Final meeting (2026-08-18)
 
-
 - DPM
   - Widget dominates old DPM -- kill old DPM
   - Final corrections to DPM calculation
@@ -55,9 +54,12 @@
   - End-to-end dayu eval
 
 - Doing today: cleanup:
-`/qfs/projects/datamesh/tang584/`
-`/qfs/projects/oddite/tang584/`
-`/people/tang584`
+  ```sh
+/qfs/projects/oddite/tang584/
+/rcfs/projects/oddite
+/qfs/projects/datamesh/tang584/
+/people/tang584
+```
 
 - foreground-background question.
   - foreground-backgroun not implemented, but it raises the question of weighting
